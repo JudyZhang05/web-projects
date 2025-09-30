@@ -1,14 +1,97 @@
 body{
     margin: 0;
     overflow: hidden;
-}
-
-.container{
-    padding: 8%;
-
     width: 100vw;
     height: 100vh;
 
-    background-color: antiquewhite;
+    font-family: "DM Sans", sans-serif;
+    background-image: url('./assets/wish.gif');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
+.container{
+    height: 100%;
+
+    padding: 0% 8%;
+
+    background-color: rgba(250, 235, 215, 0.226);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.data{
+    margin: 0;
+}
+
+.subheader{
+    font-size: 20;
+}
+
+#time, #weather{
+    font-size: 50;
+}
+
+#list{
+    font-size: 25;
+}
+
+.visualWeather{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+#weatherIcon{
+    width: 60px;
+    height: 60px;
+}
+
+.point{
+    display: list-item;
+    list-style: circle;
+    margin-left: 30px;
+    cursor: default;
+    width: fit-content;
+}
+.cross{
+    text-decoration: line-through;
+}
+
+.leaf{
+    position: absolute;
+    width: 100px;
+}
+.l1{
+    animation: blowing 5s infinite 5s;
+    top: -100;
+    right: 0;
+}
+.l2{
+    animation: blowing1 5s infinite 9s;
+    top: -100;
+    right: 200;
+}
+.l3{
+    animation: blowing2 5s infinite 7s;
+    top: -100;
+    right: 400;
+}
+
+@keyframes blowing{
+    0% {opacity: 100%;}
+    90% {top: 600; right: 1000; opacity: 100%; transform:rotate(360deg);}
+    100% {top: 600; right: 1000; opacity: 0%; transform:rotate(360deg);}
+}
+@keyframes blowing1{
+    0% {opacity: 100%;}
+    90% {top: 600; right: 800; opacity: 100%; transform:rotate(450deg);}
+    100% {top: 600; right: 800; opacity: 0%; transform:rotate(450deg);}
+}
+@keyframes blowing2{
+    0% {opacity: 100%;}
+    90% {top: 600; right: 500; opacity: 100%; transform:rotate(400deg);}
+    100% {top: 600; right: 500; opacity: 0%; transform:rotate(400deg);}
+}

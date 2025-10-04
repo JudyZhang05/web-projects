@@ -14,11 +14,7 @@ window.onload = () => {
     let day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate() 
 
     // AM and PM
-    let hours = date.getHours()
-    let ampm = hours >= 12 ? 'PM' : 'AM'
-    // Convert to 12-hour format
-    hours = hours % 12;
-    hours = hours ? hours : 12; // Handle 0 (midnight) as 12
+    let ampm = date.toLocaleString('en-US' ,{hour: 'numeric', hour12:true}).slice(2)
 
     today.textContent = `${weekday[date.getDay()]} ${month}/${day}`
 
@@ -32,9 +28,22 @@ window.onload = () => {
     }
     runTime()
     
+    
+    // leaf
+    const leaf1 = document.querySelector('.l1')
+    const leaf2 = document.querySelector('.l2')
+    const leaf3 = document.querySelector('.l3')
+
+    const leaves = ['./assets/oldleaf.svg', './assets/leaf.svg', './assets/newleaf.svg']
+    
     // update every minute
     setInterval( () => {
         runTime()
+
+        // leaf changes every minute
+        leaf1.src = leaves[Math.floor(Math.random()*3)]
+        leaf2.src = leaves[Math.floor(Math.random()*3)]
+        leaf3.src = leaves[Math.floor(Math.random()*3)]
     }, 6000)
 
     // hover effect for crossing and uncrossing out tasks lists
@@ -47,4 +56,6 @@ window.onload = () => {
             }
         })
     });
+
+
 }

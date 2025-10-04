@@ -20,7 +20,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .data{
@@ -39,6 +38,7 @@ body{
     font-size: 25;
 }
 
+/* weather */
 .visualWeather{
     display: flex;
     gap: 20px;
@@ -49,6 +49,7 @@ body{
     height: 60px;
 }
 
+/* tasklist */
 .point{
     display: list-item;
     list-style: circle;
@@ -60,6 +61,7 @@ body{
     text-decoration: line-through;
 }
 
+/* leaf animation */
 .leaf{
     position: absolute;
     width: 100px;
@@ -82,16 +84,16 @@ body{
 
 @keyframes blowing{
     0% {opacity: 100%;}
-    90% {top: 600; right: 1000; opacity: 100%; transform:rotate(360deg);}
-    100% {top: 600; right: 1000; opacity: 0%; transform:rotate(360deg);}
+    90% {top: 100vh; right: 1000; opacity: 100%; transform:rotate(360deg);}
+    100% {top: 100vh; right: 1000; opacity: 0%; transform:rotate(360deg);}
 }
 @keyframes blowing1{
     0% {opacity: 100%;}
-    90% {top: 600; right: 800; opacity: 100%; transform:rotate(450deg);}
-    100% {top: 600; right: 800; opacity: 0%; transform:rotate(450deg);}
+    90% {top: 100vh; right: 800; opacity: 100%; transform:rotate(450deg);}
+    100% {top: 100vh; right: 800; opacity: 0%; transform:rotate(450deg);}
 }
 @keyframes blowing2{
     0% {opacity: 100%;}
-    90% {top: 600; right: 500; opacity: 100%; transform:rotate(400deg);}
-    100% {top: 600; right: 500; opacity: 0%; transform:rotate(400deg);}
+    90% {top: 100vh; right: 500; opacity: 100%; transform:rotate(400deg);}
+    100% {top: 100vh; right: 500; opacity: 0%; transform:rotate(400deg);}
 }

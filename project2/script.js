@@ -6,10 +6,11 @@ window.onload = () => {
 
     // date and time
     let date = new Date()
+
     // day of the week
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     // single line if statements for formating month and day digits to be 00 format
-    let month = date.getMonth() < 10 ? `0${date.getMonth()}` : date.getMonth() 
+    let month = date.getMonth()+1 < 10 ? `0${date.getMonth()}` : date.getMonth()+1  //plus 1 bc getMonth is zero indexed
     let day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate() 
 
     // AM and PM
@@ -25,10 +26,12 @@ window.onload = () => {
     let runTime = () => {
         let date = new Date()
         let hour = date.getHours()%12 < 10 ? `0${date.getHours()%12}` : date.getHours()%12
+        hour = date.getHours() != 12 ? date.getHours()%12 : date.getHours()
         let minute = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
         time.textContent = `${hour}:${minute} ${ampm}`
     }
     runTime()
+
 
     setInterval( () => {
         runTime()

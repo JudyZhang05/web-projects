@@ -36,11 +36,11 @@ window.onload = () => {
 
     const leaves = ['./assets/oldleaf.svg', './assets/leaf.svg', './assets/newleaf.svg']
     
-    // update every minute
+    // update every 6 secs
     setInterval( () => {
         runTime()
 
-        // leaf changes every minute
+        // leaf changes every 6 secs
         leaf1.src = leaves[Math.floor(Math.random()*3)]
         leaf2.src = leaves[Math.floor(Math.random()*3)]
         leaf3.src = leaves[Math.floor(Math.random()*3)]

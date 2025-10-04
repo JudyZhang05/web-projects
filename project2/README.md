@@ -14,3 +14,4 @@ Project is due, with a link to your Hunter server inside `project2/`.
     2) A link to your code (on github)
     3) Documentation (see documentation notes)
 ### Examples & Inspiration
+Website Link: https://screensaver-yoll2.ondigitalocean.app

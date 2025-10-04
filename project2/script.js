@@ -31,8 +31,8 @@ window.onload = () => {
         time.textContent = `${hour}:${minute} ${ampm}`
     }
     runTime()
-
-
+    
+    // update every minute
     setInterval( () => {
         runTime()
     }, 6000)

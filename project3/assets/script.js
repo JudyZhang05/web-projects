@@ -1,12 +1,56 @@
 // 1. global variables
 let bountyContainer
+// let wantedBounties
+let inspectContainer
 
 // 2. wait for window to load
 window.onload = () => {
     // make sure the element is loaded and exists before using it
     bountyContainer = document.getElementById('bountyContainer')
+    // wantedBounties = document.getElementsByClassName('wanted')
+    inspectContainer = document.getElementById('inspectBounty')
 
     getBounties()
+
+    bountyContainer.addEventListener('click', (e) => {
+        // get bounty user clicks on
+        let realBounty
+        let thisBounty
+        if(e.target.id != 'bountyContainer'){
+            realBounty = e.target
+            thisBounty = e.target.cloneNode(true)
+            if(e.target.tagName != 'DIV'){
+                realBounty = e.target.parentElement
+                thisBounty = e.target.parentElement.cloneNode(true)
+                if(!e.target.parentElement.classList.contains('wanted')){
+                    realBounty = e.target.parentElement.parentElement
+                    thisBounty = e.target.parentElement.parentElement.cloneNode(true)
+                }
+            }
+            
+            let acceptBounty = document.createElement('div')
+            acceptBounty.textContent = 'ACCEPT'
+            acceptBounty.classList.add('acceptBounty')
+            
+            inspectContainer.appendChild(thisBounty)
+            thisBounty.appendChild(acceptBounty)
+
+            thisBounty.classList.add('inspecting')
+            thisBounty.style.transform = 'scale(200%) translateY(100px)'
+            inspectContainer.style.display = 'flex'
+
+            acceptBounty.addEventListener('click', () => {
+                bountyContainer.removeChild(realBounty)
+            })
+        }
+
+       
+    })
+
+    inspectContainer.addEventListener('click', () => {
+        inspectContainer.style.display = 'none'
+        inspectContainer.removeChild(inspectContainer.firstElementChild)
+    })
 }
 
 // 3. helper functions

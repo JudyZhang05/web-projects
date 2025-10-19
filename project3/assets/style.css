@@ -202,7 +202,7 @@ input{
     transform: translateY(-40px) scale(101%);
 }
 
-.wanted{
+.wanted {
     background: url('./public/posterPaper.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -216,6 +216,12 @@ input{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    transition: ease .3s;
+    cursor: pointer;
+}
+.wanted:hover:not(.inspecting) {
+    transform: scale(102%)!important;
 }
 .wanted h2, .wanted h3, .wanted h1{
     margin: 0;
@@ -235,3 +241,30 @@ input{
     background-color: rgba(112, 100, 84, 0.377);
 }
 
+/* inspection */
+#inspectBounty{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+
+    display:none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.inspecting{
+    padding: 2%
+}
+
+.acceptBounty{
+    margin-top: 2%;
+    font-family: "Eagle Lake";
+    background-color: rgb(219, 190, 128);
+    border-radius: 2px;
+    padding: 1% 4%;
+    transition: .3s ease;
+}
+.acceptBounty:hover{
+    transform: scale(102%);
+}

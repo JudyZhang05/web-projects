@@ -10,6 +10,7 @@ const app = express()
 app.use(express.static('assets'))
 
 // 3a. global variables for server storage
+let allBounties = []
 
 // 4. routing
 // this determines what responses the server gives based on the requests that comes in
@@ -20,11 +21,23 @@ app.get('/', (req, res) => {
 app.get('/submit', (req, res) => {
     console.log(req.query)
 
-    res.redirect('/')
+    const bounty = {
+        name: req.query.bountyName
+        ,title: req.query.bountyTitle
+        ,reward: req.query.reward
+    }
+
+    allBounties.push(bounty)
+
+    res.redirect('/all-bounties')
+})
+
+app.get('/all-bounties', (req, res) => {
+    res.json({bounty: allBounties})
 })
 
 // 5. set the app to listen to requests
 // ALWAYS GOES LAST
-app.listen(3001, () => {
-    console.log('server running on http://127.0.0.1:3001/')
+app.listen(2518, () => {
+    console.log('server running on http://127.0.0.1:2518/')
 })

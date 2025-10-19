@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Tavern Homepage */
+.containerWrapper{
+    background: url('./public/tavern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5f5052;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 140vw;
+}
+
+#bartender{
+    width: 55vh;
+    transition: ease .3s;
+}
+
+#bountyBoard{
+    width: 100vh;
+    transition: ease .3s;
+}
+
+#bartender:hover, #bountyBoard:hover{
+    transform: scale(102%);
+}
+
+#tableTop{
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    bottom: -50;
+}
+
+/* Application page */
+
+
+
+/* Board page */
+
+.bountyWrapper{
+    height: 100%;
+    width: 100%;;
+    background: url('./public/bountyBoard.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+}
+
+.labelContainer{
+    padding-top: 1%;
+    border: solid 30px #3a291a;
+    border-top: solid 20px #3a291a;
+    border-bottom: none;
+}
+
+#bountyContainer{
+    overflow-y: auto;
+    border-left: solid 30px #3a291a;
+    border-right: solid 30px #3a291a;
+    height: 70vh; 
+
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-left: 1%;
+    flex-wrap: wrap;
+    gap: 3%;
+
+}
+
+.backContainer{
+    border-left: solid 30px #3a291a;
+    border-right: solid 30px #3a291a;
+    height: 100%;
+}
+
+.wanted h2, .wanted h3, .wanted h1{
+    margin: 0;
+}
+
+.wanted{
+    background: url('./public/posterPaper.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    padding: 1%;
+    height: 200px;
+    width: fit-content;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* img placeholder */
+.placeholder-img{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}

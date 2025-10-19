@@ -1,35 +1,61 @@
 <html>
     <head>
         <title>Bounty Application</title>
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
         <link href="style.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Long+Cang&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="wrapper">
-            <a href="tavern.html">Scrap</a>
+        <div class="applicationWrapper">
+            <a href="index.html" id="tableDagger"></a>
             <form action="/submit" method="GET">
-                <label for="bountyName">What's their name?</label>
-                <input type="text" name="bountyName"><br/>
+                <div class="bountyForm">
+                    <div class="questions">
+                        <div></div>
+                        <div>
+                            <h1>BOUNTY APPLICATION</h1>
+                            <small>Entrusted to the Fantastical Bounty Group&trade;</small>
+                        </div>
+                        <div class="answer">
+                            <label for="bountyName">What's their name?</label>
+                            <input type="text" name="bountyName" placeholder="i.e. Arthur Fleck">
+                        </div>
+                        
+                        <div class="answer">
+                            <label for="bountyTitle">What title are they most known as?</label>
+                            <input type="text" name="bountyTitle" placeholder="i.e. THE JOKER" id="upTitle">
+                        </div>
 
-                <label for="bountyTitle">What's their distinguishing title?</label>
-                <input type="text" name="bountyTitle"><br/>
+                        <!-- NICE TO HAVES -->
+                        <!-- <label for="bountyImage">What do they look like?</label><br/>
+                        <input type="file" name="bountyImage"><br/>
 
-                <!-- NICE TO HAVES -->
-                <!-- <label for="bountyImage">What do they look like?</label><br/>
-                <input type="file" name="bountyImage"><br/>
+                        <label>How do you prefer their wellbeing?</label><br/>
+                        <input type="radio" id="deadCheck" name="status" value="dead">
+                        <label for="deadCheck">Dead</label><br/>
+                        <input type="radio" id="aliveCheck" name="status" value="alive">
+                        <label for="aliveCheck">Alive</label><br/>
+                        <input type="radio" id="eitherCheck" name="status" value="either">
+                        <label for="eitherCheck">Either</label><br/> -->
 
-                <label>How do you prefer their wellbeing?</label><br/>
-                <input type="radio" id="deadCheck" name="status" value="dead">
-                <label for="deadCheck">Dead</label><br/>
-                <input type="radio" id="aliveCheck" name="status" value="alive">
-                <label for="aliveCheck">Alive</label><br/>
-                <input type="radio" id="eitherCheck" name="status" value="either">
-                <label for="eitherCheck">Either</label><br/> -->
-
-                <label>How much are you willing to offer?</label><br>
-                <input type="number" id="reward" min="1" max="999999" name="reward"> gold coins<br/>
-
-                <input type="submit" value="Done">
+                        <div class="answer">
+                            <label>How much are you willing to offer?</label>
+                            <div>
+                                <input type="number" min="1" max="999999" name="reward" placeholder="i.e. 999999" id="reward"> GOLD COINS
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        
+                    </div>
+                </div>
+                <div class="bountySubmit">
+                    <input type="submit" value="" id="tableCoin">
+                </div>
             </form>
         </div>
     </body>

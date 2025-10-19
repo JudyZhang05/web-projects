@@ -22,14 +22,14 @@ app.get('/submit', (req, res) => {
     console.log(req.query)
 
     const bounty = {
-        name: req.query.bountyName
-        ,title: req.query.bountyTitle
+        name: req.query.bountyName[0].toUpperCase() + req.query.bountyName.slice(1)
+        ,title: req.query.bountyTitle.toUpperCase()
         ,reward: req.query.reward
     }
 
     allBounties.push(bounty)
 
-    res.redirect('/all-bounties')
+    res.redirect('/')
 })
 
 app.get('/all-bounties', (req, res) => {

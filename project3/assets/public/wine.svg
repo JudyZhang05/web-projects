@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="wine" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 551.24 705.32">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        opacity: .57;
+      }
+
+      .cls-3 {
+        fill: #d3cccb;
+        opacity: .44;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+        opacity: .55;
+      }
+
+      .cls-5 {
+        font-family: Papyrus-Regular, Papyrus;
+        font-size: 48px;
+      }
+
+      .cls-2 {
+        fill: #6b5151;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="274.55" y1="115.4" x2="274.55" y2="36.74" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5c254d"/>
+      <stop offset="1" stop-color="#842c33"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-1">
+    <path class="cls-3" d="M534.23,51.74h0C458.6-4.59,92.64-8.25,5.15,51.44c-.72.49,1.79,1.46,1.79,1.46.2.05,235.2,140.63,527.29-1.16Z"/>
+    <path class="cls-3" d="M287.5,267.14l246.73-215.4s-250.81,159.67-529.32,0h0s240.91,210.32,240.91,210.32l5.9,344.22s-131.28,60.91-139.68,63.01c-8.4,2.1,58.82,26.92,157.54,26.92s159.72-30.55,159.72-30.55l-140.81-61.48-.97-337.03Z"/>
+  </g>
+  <path class="cls-2" d="M273.92,232.29l167.71-115.35c-198.57,75.67-334.36,2.34-334.36,2.34l151.22,112.58,4.05,379.29s-86.99,42.5-92.3,43.83c-5.31,1.33,37.19,17.02,99.6,17.02s100.98-19.32,100.98-19.32l-92.08-41.92-4.82-378.47Z"/>
+  <path class="cls-4" d="M491.07,70.85h0c-232.87-79.79-433.04,5.41-433.04,5.41,0,0,0,0,0,0,.14.04,203.83,91.56,433.04-5.41Z"/>
+  <text class="cls-5" transform="translate(142.37 96.41)"><tspan x="0" y="0">TAVERN</tspan></text>
+</svg>

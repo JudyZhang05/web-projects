@@ -41,6 +41,7 @@ window.onload = () => {
 
             acceptBounty.addEventListener('click', () => {
                 bountyContainer.removeChild(realBounty)
+                deleteBounty(realBounty)
             })
         }
 
@@ -54,8 +55,7 @@ window.onload = () => {
 }
 
 // 3. helper functions
-// async means we can use fetch
-// async needs an "await" pair
+// place all submitted bounties on the bounty board
 async function getBounties() {
     let res = await fetch('/all-bounties')
 
@@ -72,7 +72,7 @@ async function getBounties() {
         let wantedName = document.createElement('small')
         wantedName.textContent = data.name
 
-        // puts specific images to specific 
+        // puts specific images to specific bounties
         let sketchImg = document.createElement('img')
         if(data.title == 'THE JOKER'){
             sketchImg.src = './public/vJ.svg'
@@ -86,6 +86,7 @@ async function getBounties() {
         sketchImg.classList.add('sketch')
         
         let wantedReward = document.createElement('h3')
+        wantedReward.classList.add('gold')
         wantedReward.textContent = `${data.reward} GOLD` 
 
         newDiv.appendChild(wantedLabel)
@@ -101,4 +102,17 @@ async function getBounties() {
         bountyContainer.appendChild(newDiv)
     }
 
+}
+
+// delete bounties from board when user accepts them
+async function deleteBounty(thisBounty){
+    let res = await fetch('/all-bounties')
+
+    let json = await res.json()
+    
+    for(let bounty of json.bounty){
+        if(bounty.name == thisBounty.querySelector('small').textContent && bounty.title == thisBounty.querySelector('h3').textContent && bounty.reward + ' GOLD' == thisBounty.querySelector('.gold').textContent ){
+            console.log('deleting ' + bounty)
+        }
+    }
 }

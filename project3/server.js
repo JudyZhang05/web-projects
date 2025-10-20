@@ -36,6 +36,9 @@ app.get('/all-bounties', (req, res) => {
     res.json({bounty: allBounties})
 })
 
+// app.delete('/', (req, res) => {
+// })
+
 // 5. set the app to listen to requests
 // ALWAYS GOES LAST
 app.listen(2518, () => {

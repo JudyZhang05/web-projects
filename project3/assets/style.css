@@ -34,6 +34,25 @@ body{
     transform: scale(102%);
 }
 
+.instructionContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#instructions{
+    z-index: 101;
+    position: fixed;
+    bottom: -250;
+    height: 25vw;
+    transition: .5s ease;
+    cursor: zoom-in;
+}
+#instructions:hover{
+    transform: scale(120%) ;
+    bottom: -20;
+}
+
 #tableTop{
     width: 100vw;
     z-index: 100;
@@ -169,6 +188,10 @@ input{
     border-top: solid 20px #3a291a;
     border-bottom: none;
     height: 15%;
+    background: url('./public/bountyLabel.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center
 }
 
 #bountyContainer{

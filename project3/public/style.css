@@ -124,7 +124,7 @@ body{
     transform: scale(102%);
 }
 
-form{
+#bountyApplication{
     width: 70%;
     display: flex;
     justify-content: space-between;

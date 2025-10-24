@@ -10,7 +10,7 @@
     <body>
         <div class="applicationWrapper">
             <a href="tavern.html" id="tableDagger"></a>
-            <form action="/submit" method="GET">
+            <form action="/submit" method="GET" id="bountyApplication">
                 <div class="bountyForm">
                     <div class="questions">
                         <div></div>
@@ -25,12 +25,8 @@
                         
                         <div class="answer">
                             <label for="bountyTitle">What title are they most known as?</label>
-                            <input type="text" name="bountyTitle" placeholder="i.e. THE JOKER" id="upTitle">
+                            <input type="text" name="bountyTitle" placeholder="i.e. JOKER" id="upTitle">
                         </div>
-
-                        <!-- NICE TO HAVES -->
-                        <!-- <label for="bountyImage">What do they look like?</label><br/>
-                        <input type="file" name="bountyImage"><br/>-->
 
                         <div class="answer">
                             <label>How much are you willing to offer?</label>
@@ -41,7 +37,6 @@
                         <div></div>
                         <div></div>
                         <div></div>
-                        
                     </div>
                 </div>
                 <div class="bountySubmit">

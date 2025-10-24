@@ -19,15 +19,13 @@ app.get('/', (res, req) => {
 })
 
 app.get('/submit', (req, res) => {
-    console.log(req.query)
-
     const bounty = {
         name: req.query.bountyName[0].toUpperCase() + req.query.bountyName.slice(1)
         ,title: req.query.bountyTitle.toUpperCase()
         ,reward: req.query.reward
     }
 
-    allBounties.push(bounty)
+    allBounties.unshift(bounty)
 
     res.redirect('/')
 })
@@ -35,9 +33,6 @@ app.get('/submit', (req, res) => {
 app.get('/all-bounties', (req, res) => {
     res.json({bounty: allBounties})
 })
-
-// app.delete('/', (req, res) => {
-// })
 
 // 5. set the app to listen to requests
 // ALWAYS GOES LAST

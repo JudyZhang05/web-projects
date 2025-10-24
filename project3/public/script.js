@@ -75,7 +75,7 @@ async function getBounties() {
 
         // puts specific images to specific bounties
         let sketchImg = document.createElement('img')
-        if(data.title == 'THE JOKER'){
+        if(data.title == 'JOKER'){
             sketchImg.src = './assets/vJ.svg'
         }else if(data.title == 'DR. EGGMAN'){
             sketchImg.src = './assets/vE.svg'

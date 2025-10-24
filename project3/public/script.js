@@ -10,8 +10,10 @@ window.onload = () => {
     // wantedBounties = document.getElementsByClassName('wanted')
     inspectContainer = document.getElementById('inspectBounty')
 
+    // get submitted bounties and place them on bounty board 
     getBounties()
 
+    // inspect an enlargement of the bounty the user clicked
     bountyContainer.addEventListener('click', (e) => {
         // get bounty user clicks on
         let realBounty
@@ -44,10 +46,9 @@ window.onload = () => {
                 deleteBounty(realBounty)
             })
         }
-
-       
     })
 
+    // close inspection container 
     inspectContainer.addEventListener('click', () => {
         inspectContainer.style.display = 'none'
         inspectContainer.removeChild(inspectContainer.firstElementChild)

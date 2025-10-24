@@ -43,14 +43,28 @@ body{
 #instructions{
     z-index: 101;
     position: fixed;
-    bottom: -250;
-    height: 25vw;
+    bottom: -50;
+    height: 15vw;
     transition: .5s ease;
     cursor: zoom-in;
 }
 #instructions:hover{
-    transform: scale(120%) ;
     bottom: -20;
+}
+#inspectInstruction{
+    z-index: 102;
+    position: absolute;
+    width: 110vw;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.349);
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: start;
+    cursor: zoom-out;
+}
+#inspectInstruction > img{
+    width: 45vw;
 }
 
 #tableTop{
@@ -264,12 +278,12 @@ input{
     background-color: rgba(112, 100, 84, 0.377);
 }
 
-/* inspection */
+/* inspection of Bounty and Instruction*/
 #inspectBounty{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 102;
 
     display:none;
     justify-content: center;

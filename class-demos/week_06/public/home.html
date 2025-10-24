@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>class 6</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- adding the enctype attribute -->
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <div class="form-title">
+                <!-- label needs 'for' attribute needs an assoicated 'id' -->
+                <label for="title">Enter a title:</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="file-upload">
+                <label for="theimage">Upload</label>
+                <input type="file" name="theimage" id="theimage">
+            </div>
+            <textarea name="caption"></textarea>
+            <input type="submit" value="Make Post">
+        </form>
+
+        <div id="all-posts">
+
+        </div>
+    </body>
+</html>

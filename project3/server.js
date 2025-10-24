@@ -7,15 +7,15 @@ const app = express()
 
 // 3. middleware
 // stuff that happens between initialization and app listen
-app.use(express.static('assets'))
+app.use(express.static('public'))
 
 // 3a. global variables for server storage
 let allBounties = []
 
 // 4. routing
 // this determines what responses the server gives based on the requests that comes in
-app.get('/', (req, res) => {
-    res.send('server works')
+app.get('/', (res, req) => {
+    req.sendFile('tavern.html', {root:'public'})
 })
 
 app.get('/submit', (req, res) => {

@@ -75,13 +75,13 @@ async function getBounties() {
         // puts specific images to specific bounties
         let sketchImg = document.createElement('img')
         if(data.title == 'THE JOKER'){
-            sketchImg.src = './public/vJ.svg'
+            sketchImg.src = './assets/vJ.svg'
         }else if(data.title == 'DR. EGGMAN'){
-            sketchImg.src = './public/vE.svg'
+            sketchImg.src = './assets/vE.svg'
         }else if(data.title == 'DIABLO GATO'){
-            sketchImg.src = './public/vP.svg'
+            sketchImg.src = './assets/vP.svg'
         }else{
-            sketchImg.src = './public/villain.svg'
+            sketchImg.src = './assets/villain.svg'
         }
         sketchImg.classList.add('sketch')
         

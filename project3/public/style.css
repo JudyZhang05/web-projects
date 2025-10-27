@@ -222,6 +222,9 @@ input{
     flex-wrap: wrap;
     gap: 3%;
 }
+#bountyContainer::-webkit-scrollbar {
+    display: none;
+  }
 
 .backContainer{
     border-left: solid 30px #3a291a;

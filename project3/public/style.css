@@ -308,3 +308,118 @@ input{
 .acceptBounty:hover{
     transform: scale(102%);
 }
+
+/* ====================  Kris CSS Media Queries Update! =====================*/
+
+/* === SMALLER LAPTOP SCREENS / NARROW BROSWER WINDOWS === */
+
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    gap: 2rem;
+  }
+
+  #bartender, #bountyBoard {
+    width: 50vw;
+  }
+
+  #bountyApplication {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .questions {
+    width: 80%;
+  }
+}
+
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+
+  body {
+    overflow: auto;      
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;      
+    align-items: center;
+    justify-content: center;
+    width: 100vw;                
+  }
+
+  #bartender,
+  #bountyBoard {
+    width: 80vw;                 /* fit within mobile screen */
+  }
+
+  #instructions {
+    height: auto;
+    width: 90vw;
+    bottom: 0;
+  }
+
+  #inspectInstruction > img {
+    width: 80vw;                
+  }
+
+  #tableTop {
+    width: 100%;
+    bottom: 0;
+  }
+
+  /* Application page */
+  .applicationWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-size: contain;
+  }
+
+  #bountyApplication {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .questions {
+    width: 90%;
+    height: auto;
+    font-size: 1.2rem;
+  }
+
+  input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Board page */
+  .bountyWrapper {
+    background-size: contain;
+    overflow-y: auto;
+  }
+
+  #bountyContainer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .wanted {
+    width: 80vw;
+    padding: 5%;
+  }
+
+  #tavernWine {
+    width: 60vw;
+  }
+}

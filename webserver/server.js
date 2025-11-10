@@ -14,6 +14,6 @@ app.get('/test', function (req, res) {
 
 // And finally start the server. We start the server on port 80, which is the default port for http.
 // If you want to learn more about ports, read this: https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/
-app.listen(80, function () {
+app.listen(3002, function () {
   console.log('Example app listening on port 80!')
 });

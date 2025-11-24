@@ -45,7 +45,7 @@ async function loadPosts(){
 async function handleClick(postId){
     console.log('button was clicked: '+postId)
 
-    let request = await fetch ('/delete-post', {
+    await fetch ('/delete-post', {
         // method is the type of request
         method: 'DELETE'
         // body is teh data sent in json format
@@ -54,5 +54,7 @@ async function handleClick(postId){
         ,headers: {
             'Content-Type': 'application/json'
         }
+    }).then(() => {
+        window.location.href = '/'
     })
 }

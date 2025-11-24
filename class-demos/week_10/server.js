@@ -4,11 +4,11 @@ const multer = require('multer')
 const nedb = require('@seald-io/nedb')
 
 // setup configurations for libraries
-const encodedParser = parser.urlencoded({extended:true})
-const uploadProcessor = multer({dest:'public/upload'})
+const encodedParser = parser.urlencoded({extended: true})
+const uploadProcessor = multer({dest: 'public/upload'})
 // added database variable to keep track of the database file
 let database = new nedb({
-    file: 'database.txt',
+    filename: 'database.txt',
     autoload: true
 })
 

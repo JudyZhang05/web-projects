@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Tavern Homepage */
+.containerWrapper{
+    background: url('./assets/tavern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5f5052;
+    background-position: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 140vw;
+}
+
+#bartender{
+    width: 55vh;
+    transition: ease .3s;
+}
+
+#bountyBoard{
+    width: 100vh;
+    transition: ease .3s;
+}
+
+#bartender:hover, #bountyBoard:hover{
+    transform: scale(102%);
+}
+
+.instructionContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#instructions{
+    z-index: 101;
+    position: fixed;
+    bottom: -50;
+    height: 15vw;
+    transition: .5s ease;
+    cursor: zoom-in;
+}
+#instructions:hover{
+    bottom: -20;
+}
+#inspectInstruction{
+    z-index: 102;
+    position: absolute;
+    width: 110vw;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.349);
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: start;
+    cursor: zoom-out;
+}
+#inspectInstruction > img{
+    width: 45vw;
+}
+
+#tableTop{
+    width: 100vw;
+    z-index: 100;
+    position: fixed;
+    bottom: -50;
+}
+
+/* Application page */
+
+.applicationWrapper{
+    height: 100%;
+    width: 100%;;
+    background: url('./assets/barTapleTop.svg');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tableDagger{
+    background: url('./assets/tableDagger.svg');
+    width: 15vh;
+    height: 60vh;
+    transform: rotate(25deg) translateY(-20vh);
+}
+
+#tableCoin{
+    all: unset;
+    width: 25vh;
+    height: 25vh;
+    background: url('./assets/tableCoin.svg');
+    cursor: pointer;
+}
+.bountySubmit{
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+#tableDagger, #tableCoin, .bountyForm{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: .3s ease;
+}
+
+#tableDagger:hover{
+    transform: rotate(23deg) translateY(-17vh);
+}
+
+#tableCoin:hover{
+    transform: scale(102%);
+}
+
+#bountyApplication{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bountyForm{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./assets/posterPaper.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    height: 70vw;
+    width: 100%; 
+    max-width: 400px;
+    justify-content: space-between;
+    font-family: 'Long Cang';
+    font-size: 1.6rem;
+}
+
+.questions label{
+    font-weight: bold;
+}
+
+.questions h1{
+    font-family: 'Eagle Lake';
+    font-size: 1.9rem;
+    margin-bottom: -7px;
+}
+
+.answer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    all: unset;
+    background-color:rgb(197, 175, 156);
+    height: 30px;
+    padding: 2% 4%;
+    text-transform: capitalize;
+}
+#upTitle{
+    text-transform: uppercase;
+}
+#reward{
+    width: 130px;
+    font-family: 'Eagle Lake';
+    font-size: 1rem;
+}
+
+/* Board page */
+
+.bountyWrapper{
+    height: 100%;
+    width: 100%;;
+    background: url('./assets/bountyBoard.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+}
+
+.labelContainer{
+    padding-top: 1%;
+    border: solid 30px #3a291a;
+    border-top: solid 20px #3a291a;
+    border-bottom: none;
+    height: 15%;
+    background: url('./assets/bountyLabel.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center
+}
+
+#bountyContainer{
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-left: solid 30px #3a291a;
+    border-right: solid 30px #3a291a;
+    height: 65%; 
+
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-left: 1%;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+#bountyContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+.backContainer{
+    border-left: solid 30px #3a291a;
+    border-right: solid 30px #3a291a;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+#tavernWine{
+    width: 50vh;
+    transform: translateY(-35px);
+    transition: ease .3s;
+}
+#tavernWine:hover{
+    transform: translateY(-40px) scale(101%);
+}
+
+.wanted {
+    background: url('./assets/posterPaper.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    padding: 2% 1%;
+    height: fit-content;
+    width: fit-content;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: ease .3s;
+    cursor: pointer;
+}
+.wanted:hover:not(.inspecting) {
+    transform: scale(102%)!important;
+}
+.wanted h2, .wanted h3, .wanted h1{
+    margin: 0;
+}
+.wanted h1, .wanted h3{
+    font-family: 'Eagle Lake';
+}
+.wanted small{
+    font-family: 'Long Cang';
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.sketch{
+    height:100px;
+    border: solid 1px black;
+    background-color: rgba(112, 100, 84, 0.377);
+}
+
+/* inspection of Bounty and Instruction*/
+#inspectBounty{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+
+    display:none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.inspecting{
+    padding: 2%
+}
+
+.acceptBounty{
+    margin-top: 2%;
+    font-family: "Eagle Lake";
+    background-color: rgb(219, 190, 128);
+    border-radius: 2px;
+    padding: 1% 4%;
+    transition: .3s ease;
+}
+.acceptBounty:hover{
+    transform: scale(102%);
+}
+
+/* sketch */
+.sketch{
+    width: 100%;
+    height: 20%;
+    border: none;
+    background-color: #5f505200;
+}
+canvas { 
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(190, 182, 165);
+    border: 1px solid rgb(190, 182, 165); 
+}

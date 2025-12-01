@@ -28,6 +28,8 @@ app.use(express.static('public'))
 
 // 3a. global variables for server storage
 let allBounties = []
+let bountyNum = 0
+
 
 // 4. routing
 // this determines what responses the server gives based on the requests that comes in
@@ -35,6 +37,39 @@ app.get('/', (res, req) => {
     req.sendFile('tavern.html', {root:'public'})
 })
 
+// NEW
+// app.post('/upload', uploadProcessor.single('sketchImg'), (req, res) => {
+//     console.log(req.body)
+
+//     // post requests store data coming in from the request body
+//     let bounty = {
+//         name: req.query.bountyName[0].toUpperCase() + req.query.bountyName.slice(1)
+//         ,title: req.query.bountyTitle.toUpperCase()
+//         ,reward: req.query.reward
+//         ,bountyNumber: bountyNum
+//     }
+    
+
+//     if(req.file){
+//         bounty.imgSrc = '/images/' + req.file.filename
+//     }
+
+//     console.log(bounty)
+
+//     // adding individual post data to global data array
+//     // .push adds to the end of the arry
+//     // .unshift adds to the beginning of the array
+//     allBounties.unshift(bounty)
+
+//     // incrementing the post number 
+//     bountyNum++
+
+//     // once we have stored the data, refresh back to home page
+//     res.redirect('/')
+// })
+
+
+// OLD
 app.get('/submit', (req, res) => {
     const bounty = {
         name: req.query.bountyName[0].toUpperCase() + req.query.bountyName.slice(1)
@@ -47,41 +82,10 @@ app.get('/submit', (req, res) => {
     res.redirect('/')
 })
 
+
 app.get('/all-bounties', (req, res) => {
     res.json({bounty: allBounties})
 })
-
-// IMG UPLOAD
-// app.post('/upload', uploadProcessor.single('imgUpload'), (req, res) => {
-    
-//     console.log(req.body)
-
-    // creates an object that keeps track of the time using the Date class from the MDN documentation
-    // const currentTime = new Date(Date.now())
-
-    // console.log(currentTime)
-
-    // let data = {
-    //     postText: req.body.text
-    //     ,postTime: currentTime.toLocaleString()
-    //     ,postTimestamp: currentTime
-    // }
-
-    // // 2 params for insert
-    // // 1. darta to be added
-    // // 2. callback for after the data has been added
-    // database.insert(data, (err, dataToBeAdded) => {
-    //     if (err){
-    //         res.redirect('/')
-    //     }else{
-    //         console.log(dataToBeAdded)
-    //         res.redirect('/')
-    //     }
-    // })
-    
-    // this line is now redundant because we need to redirect after the data has been added
-    // res.redirect('/')
-// })
 
 // 5. set the app to listen to requests
 // ALWAYS GOES LAST

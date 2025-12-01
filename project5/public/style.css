@@ -323,3 +323,7 @@ canvas {
     background-color: rgb(190, 182, 165);
     border: 1px solid rgb(190, 182, 165); 
 }
+#clear{
+    text-align: end;
+    cursor: pointer;
+}

@@ -312,7 +312,7 @@ input{
 /* sketch */
 .sketch{
     width: 100%;
-    height: 20%;
+    height: fit-content;
     border: none;
     background-color: #5f505200;
 }
@@ -324,11 +324,11 @@ canvas {
     display: flex;
     justify-content: center;    
     margin-top: 2%;
-    background-color: rgb(197, 175, 156);
 }
 #clear, #save{
     text-align: end;
     cursor: pointer;
 }
-
-/* upload */
+#sketchImg{
+    width: 370px;
+}

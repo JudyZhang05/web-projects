@@ -5,10 +5,14 @@ const gCtx = gCanvas.getContext('2d');
 
 // 2. wait for window to load
 window.onload = () => {
-    // sketch
-    gCanvas.addEventListener('mousedown', onMouseDown)
-    document.querySelector('#clear').addEventListener('click', onClear)
-    document.querySelector('#save').addEventListener('click', onSave)
+  // sketch
+  gCanvas.width = 400;
+  gCanvas.height = 300;
+  gCanvas.addEventListener('mousedown', onMouseDown)
+  document.querySelector('#clear').addEventListener('click', onClear)
+  document.querySelector('#save').addEventListener('click', onSave)
+
+
 
 }
 
@@ -16,15 +20,15 @@ window.onload = () => {
 // sketch in canvas
 // Referenced from Frederik De Bleser https://www.youtube.com/watch?v=7akcEo_-yQ4
 function onMouseDown(e) {
-    e.preventDefault();  
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
+  e.preventDefault();  
+  window.addEventListener('mousemove', onMouseMove);
+  window.addEventListener('mouseup', onMouseUp);
 
 }
 
 function onMouseMove(e) {
-    e.preventDefault();
-    gCtx.fillRect(e.offsetX-4, e.offsetY-4, 3, 3);
+  e.preventDefault();
+  gCtx.fillRect(e.offsetX-4, e.offsetY-4, 3, 3);
 }
 
 function onMouseUp(e) {
@@ -34,7 +38,7 @@ function onMouseUp(e) {
 }
 
 function onClear() {
-    gCtx.clearRect(0, 0, 500, 200);
+  gCtx.clearRect(0, 0, 500, 500);
 }
 
 function onSave() {

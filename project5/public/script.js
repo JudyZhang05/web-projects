@@ -3,11 +3,6 @@ let bountyContainer
 // let wantedBounties
 let inspectContainer
 
-// canvas
-const gCanvas = document.querySelector('.c')
-// convert canvas to png
-const gCtx = gCanvas.getContext('2d')
-
 // 2. wait for window to load
 window.onload = () => {
     // make sure the element is loaded and exists before using it
@@ -79,6 +74,8 @@ async function getBounties() {
         let wantedName = document.createElement('small')
         wantedName.textContent = data.name
 
+        // newDiv.addAttribute('id', 'bountyNumber-' + data.bountyNumber)
+
         // puts specific images to specific bounties
         let sketchImg = document.createElement('img')
         if(data.title == 'JOKER'){
@@ -88,7 +85,8 @@ async function getBounties() {
         }else if(data.title == 'DIABLO GATO'){
             sketchImg.src = './assets/vP.svg'
         }else{
-            sketchImg.src = './assets/villain.svg'
+            sketchImg.src = data.imgSrc
+            // sketchImg.src = './assets/villain.svg'
         }
         sketchImg.classList.add('sketch')
         
@@ -123,15 +121,3 @@ async function deleteBounty(thisBounty){
         }
     }
 }
-
-// function onSave() {
-//   gCanvas.toBlob((blob) => {
-//     const timestamp = Date.now().toString();
-//     const a = document.createElement('a');
-//     document.body.append(a);
-//     a.download = `export-${timestamp}.png`;
-//     a.href = URL.createObjectURL(blob);
-//     a.click();
-//     a.remove();
-//   });
-// }

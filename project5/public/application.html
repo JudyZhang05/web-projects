@@ -25,7 +25,7 @@
                 <input type="submit" value="Make Post">
             </form> -->
 
-            <!-- <form method="POST" action="/upload" enctype="multipart/form-data">
+            <form method="POST" action="/upload" enctype="multipart/form-data" id="bountyApplication">
                 <div class="bountyForm">
                     <div class="questions">
                         <div></div>
@@ -36,54 +36,17 @@
 
                         <div class="sketch">
                             <label id="canvasTitle">Draw below how they look like?</label>
-                            <div class="canvasContainer">
-                                <canvas class="c"></canvas>
-                            </div>
-                            <div id="clear">Clear</div>
-                        </div>
-
-                        <div class="answer">
-                            <label for="bountyName">What's their name?</label>
-                            <input type="text" name="bountyName" placeholder="i.e. Arthur Fleck">
-                        </div>
-                        
-                        <div class="answer">
-                            <label for="bountyTitle">What title are they most known as?</label>
-                            <input type="text" name="bountyTitle" placeholder="i.e. JOKER" id="upTitle">
-                        </div>
-
-                        <div class="answer">
-                            <label>How much are you willing to offer?</label>
-                            <div>
-                                <input type="number" min="1" max="999999" name="reward" placeholder="i.e. 999999" id="reward"> GOLD COINS
-                            </div>
-                        </div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </form> -->
-
-            <!-- OLD -->
-            <form action="/submit" method="GET" id="bountyApplication">
-                <div class="bountyForm">
-                    <div class="questions">
-                        <div></div>
-                        <div>
-                            <h1>BOUNTY APPLICATION</h1>
-                            <small>Entrusted to the Fantastical Bounty Group&trade;</small>
-                        </div>
-
-                        <div class="sketch">
-                            <label id="canvasTitle">Draw below how they look like?</label>
-                            <div class="canvasContainer" id="cWrapper">
+                            <div class="canvasContainer"  id="cWrapper">
                                 <canvas class="c"></canvas>
                             </div>
                             <div style="display:flex; justify-content: space-between;">
                                 <div id="save">Save</div>
                                 <div id="clear">Clear</div>
                             </div>
-                            <!-- <div id="clear">Clear</div> -->
+                        </div>
+                        <div class="file-upload">
+                            <label for="sketchImg">Upload your illustration below:</label>
+                            <input type="file" name="sketchImg" id="sketchImg">
                         </div>
 
                         <div class="answer">
@@ -110,8 +73,54 @@
                     <input type="submit" value="" id="tableCoin">
                 </div>
             </form>
+
+            <!-- OLD -->
+            <!-- <form action="/submit" method="GET" id="bountyApplication">
+                <div class="bountyForm">
+                    <div class="questions">
+                        <div></div>
+                        <div>
+                            <h1>BOUNTY APPLICATION</h1>
+                            <small>Entrusted to the Fantastical Bounty Group&trade;</small>
+                        </div>
+
+                        <div class="sketch">
+                            <label id="canvasTitle">Draw below how they look like?</label>
+                            <div class="canvasContainer" id="cWrapper">
+                                <canvas class="c"></canvas>
+                            </div>
+                            <div style="display:flex; justify-content: space-between;">
+                                <div id="save">Save</div>
+                                <div id="clear">Clear</div>
+                            </div>
+                            <div id="clear">Clear</div>
+                        </div>
+
+                        <div class="answer">
+                            <label for="bountyName">What's their name?</label>
+                            <input type="text" name="bountyName" placeholder="i.e. Arthur Fleck">
+                        </div>
+                        
+                        <div class="answer">
+                            <label for="bountyTitle">What title are they most known as?</label>
+                            <input type="text" name="bountyTitle" placeholder="i.e. JOKER" id="upTitle">
+                        </div>
+
+                        <div class="answer">
+                            <label>How much are you willing to offer?</label>
+                            <div>
+                                <input type="number" min="1" max="999999" name="reward" placeholder="i.e. 999999" id="reward"> GOLD COINS
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="bountySubmit">
+                    <input type="submit" value="" id="tableCoin">
+                </div>
+            </form> -->
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
         <script src="./applicationScript.js"></script>
     </body>
 </html>
